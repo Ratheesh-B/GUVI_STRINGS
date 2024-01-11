@@ -1,0 +1,16 @@
+#a=[str(x) for x in input().split()]
+a=list(map(str,input().split()))
+org=[]
+dup=[]
+res=[]
+def orgList(a):
+  for i in a:
+    if i not in org:
+      org.append(i)
+    elif i not in dup:
+      dup.append(i)
+  for j in org:
+    if j not in dup:
+      res.append(j) 
+  return res
+print(*orgList(a))
