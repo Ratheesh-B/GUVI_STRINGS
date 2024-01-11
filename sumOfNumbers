@@ -1,0 +1,5 @@
+from functools import reduce
+arr=[int(x) for x in input() if x.isdigit()]
+def sum(arr):
+  return reduce(lambda a,b:a+b,arr)
+print(sum(arr))
