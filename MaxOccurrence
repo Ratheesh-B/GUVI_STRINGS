@@ -1,0 +1,24 @@
+arr=list(map(str,input().split()))
+
+def Func(arr):
+  maxi=0
+  count=0
+  org=[]
+  res=[]
+  final=[]
+  for x in arr:
+    if x not in org:
+      org.append(x)
+  for i in org:
+    count=arr.count(i)
+    if(count>maxi):
+      maxi=count
+    
+  for j in org:
+    if(arr.count(j)==maxi):
+      res.append(j)
+  res=sorted(res)
+  final.append(res[0])
+  final.append(maxi)
+  return final
+print(*Func(arr))
