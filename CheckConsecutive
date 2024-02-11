@@ -1,0 +1,24 @@
+arr=[int(x) for x in input().split()]
+n=arr[0]
+k=arr[1]
+res=[]
+for i in range(n):
+    res.append(input())
+
+def checkConsecutive(res,k):
+  for i in range(0,len(res)-k+1):
+    c=0
+    for j in range(i+1,i+k):
+      if(res[i]==res[j]):
+        c+=1
+    if(c==(k-1)):
+      return True 
+  
+    
+  return False
+
+if(checkConsecutive(res,k)):
+  print('yes')
+else:
+  print('no')
+
